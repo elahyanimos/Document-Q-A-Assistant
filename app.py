@@ -6,11 +6,11 @@ import os
 st.set_page_config(page_title="Document Q&A Assistant", page_icon="📚")
 
 def main():
-    st.title("📚 Document Q&A Assistant")
+    st.title("Document Q&A Assistant")
     
     # Sidebar for PDF upload and database management
     with st.sidebar:
-        st.header("📁 Document Management")
+        st.header("Document Management")
         st.markdown("""
         ### Instructions
         1. Upload your PDF documents
@@ -60,13 +60,13 @@ def main():
                         st.info("If the error persists, please restart the application")
 
     # Main chat interface
-    st.header("💬 Ask Questions About Your Documents")
+    st.header("Ask Questions About Your Documents")
     
     # Display current documents
     if os.path.exists("data"):
         files = [f for f in os.listdir("data") if f.endswith('.pdf')]
         if files:
-            st.markdown("#### 📑 Currently loaded documents:")
+            st.markdown("#### Currently loaded documents:")
             for file in files:
                 st.markdown(f"- {file}")
         else:
